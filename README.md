@@ -34,7 +34,7 @@ Dentro del [HOBOware Software](https://www.onsetcomp.com/products/software/hobow
 
 La primera ventana que nos aparece corresponde a las unidades de medida que se usaran para importar los datos. En este caso los datos corresponden a presión y temperatura. Por conveción los datos de presión deben ser medidos en mbar y los de temperatura en °C. Lo anterior permite trabajar con datos de estaciones meteorologicas con mayor fácilidad. 
 
-
+![hola](./01.png)
 
 Una ves que seleccionamos las unidades HOBOware nos mostrara una grafica de los datos de presión y temperatura en el tiempo, nos indicará la fecha inicio y fin de recolección de datos asi. En este punto se pueden comenzar a ver puntos en donde se realizaron errores en las mediciones (p ej. cambios abruptos de presión, falta de datos, patrones anomalos) 
 
