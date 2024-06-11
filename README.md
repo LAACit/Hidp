@@ -84,7 +84,7 @@ Se observa que los datos cuentan con una <em><strong>Frecuencia de muestreo de 1
 
 Ahora podemos comenzar a analizar las series de tiempo. Para esto vamos a utilizar el codigo S01_Limpieza de datos 
 
-1)  Comenzamos abriendo los datos de nivel de manglar que exportamos a .csv con el HOBBOware
+1) Comenzamos abriendo los datos de nivel de manglar que exportamos a .csv con el HOBBOware
   
 `Chp=readtimetable("./01_datos/csv/Chaparro_2020_2021/Chaparro_todos2020_2021.csv");` 
 
@@ -107,9 +107,15 @@ Para graficar usamos  la función `plot`. Con el siguiente orden `plot( eje x, e
 
 `plot(Chp.FechaTiempo_GMT_06_00,Chp.PresAbs_Mbar_LGRS_N_20081786_duplicate_duplicate_duplicate_SENS,'r')`
 
-En este caso `Chp.FechaTiempo_GMT_06_00` es tiempo y `Chp.PresAbs_Mbar_LGRS_N_20081786_duplicate_duplicate_duplicate_SENS` es eje Y datos de presion, mientras `'r'` es color rojo para la grafica 
+En este caso `Chp.FechaTiempo_GMT_06_00` es el eje X con datos de tiempo y `Chp.PresAbs_Mbar_LGRS_N_20081786_duplicate_duplicate_duplicate_SENS` es el  eje Y con los datos de presion, mientras `'r'` es color rojo para la grafica. 
 
-5) 
+Se obtiene la siguiente grafica: 
+
+![Grafica Chaparro](./05.png)
+
+> [!NOTE]
+> Se puede ver como hay picos anomalos que distorcionan la escala de la imagen. Tambien se observa que las series de tiempo no abarcan los mismo espacios de tiempo. Por lo anterior se deben corregir los picos anomalos y buscar un intervalo de tiempo común para las series de tiempo 
+
 
 
 ## Corrección series de tiempo <a name="id6"></a>
