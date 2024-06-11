@@ -85,13 +85,13 @@ Se observa que los datos cuentan con una <em><strong>Frecuencia de muestreo de 1
 Ahora podemos comenzar a analizar las series de tiempo. Para esto vamos a utilizar el codigo S01_Limpieza de datos 
 
 1) Comenzamos abriendo los datos de nivel de manglar que exportamos a .csv con el HOBBOware. Para cada uno de los archvios. Vamos a utilizar la función `readtimetable` y la ruta donde esta el archvio.  Esto nos permitirá tener accesos a funciones especiales de MATLAB que nos facilitarán la visualización de los datos. 
-  
+
+Ejemplo; 
 `Chp=readtimetable("./01_datos/csv/Chaparro_2020_2021/Chaparro_todos2020_2021.csv");` 
 
-Esto abre el archivo y lo carga en el espacio de trabajo 
+Esto abre el archivo y lo carga en el espacio de trabajo.
 
 2) Inspeccionamos el archivo importado. Vemos que las columnas estan bien pero  tiene un error en la fecha. Esto lo sabemos porque el sensor fue colocado en 2020 y la fecha que muestra es 0020
-
 Para poder hacer correciones de fechas podemos hacer una variable `y` que sea igual al numero de años que tiene de error el archivo importado, en este caso 2000 años 
 
 `y=years(2000);`
@@ -100,13 +100,14 @@ Para poder hacer correciones de fechas podemos hacer una variable `y` que sea ig
 
 `Chp.FechaTiempo_GMT_06_00=Chp.FechaTiempo_GMT_06_00+y;`
 
-4) Podemos gráficar los datos
+4) Gráficar los datos para inspección de serie de tiemp
 
-Para graficar usamos  la función `plot`. Con el siguiente orden `plot( eje x, eje y, Color y forma)`
+Para graficar usamos la función `plot`. Con el siguiente orden `plot( eje x, eje y, Color y forma)`
 
+Ejemplo: 
 `plot(Chp.FechaTiempo_GMT_06_00,Chp.PresAbs_Mbar_LGRS_N_20081786_duplicate_duplicate_duplicate_SENS,'r')`
 
-En este caso `Chp.FechaTiempo_GMT_06_00` es el eje X con datos de tiempo y `Chp.PresAbs_Mbar_LGRS_N_20081786_duplicate_duplicate_duplicate_SENS` es el  eje Y con los datos de presion, mientras `'r'` es color rojo para la grafica. 
+En este caso `Chp.FechaTiempo_GMT_06_00` es el eje X con datos de tiempo y `Chp.PresAbs_Mbar_LGRS_N_20081786_duplicate_duplicate_duplicate_SENS` es el  eje Y con los datos de presion, mientras `'r'` es color rojo para la grafica.  Al usar una `tabla de tiempo` en automatico se reconoce que estamos trabajando con fechas
 
 Se obtiene la siguiente grafica: 
 
