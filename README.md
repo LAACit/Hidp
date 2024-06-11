@@ -104,6 +104,9 @@ Para poder hacer correciones de fechas podemos hacer una variable `y` que sea ig
 
 `Chp.FechaTiempo_GMT_06_00=Chp.FechaTiempo_GMT_06_00+y;`
 
+![Corregido tiempo](./07.png)
+
+
 4) Gráficar los datos para inspección de serie de tiemp
 
 Para graficar usamos la función `plot`. Con el siguiente orden `plot( eje x, eje y, Color y forma)`
