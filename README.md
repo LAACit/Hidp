@@ -136,6 +136,13 @@ Se puede observar que los datos tiene dos tipos de errores:
 - Ausencia de datos (NaN y NaT) que pueden ser resultado de errores de softwate o equipo
 
 
+Para poder hacer la correcion de los datos vamos a utilizar las siguientes funciones: 
+- [filloutliers](https://la.mathworks.com/help/matlab/ref/filloutliers.html#description):Para poder hacer la detección y correción de los valores anómalos
+- [fillmissing](https://la.mathworks.com/help/matlab/ref/fillmissing.html): Para poder interpolar y correguir los valores que no tiene datos NaN
+- [retime](https://la.mathworks.com/help/matlab/ref/timetable.retime.html): Re muestrear e interpolar los datos en el tiempo
+- [isbetween](https://la.mathworks.com/help/matlab/ref/datetime.isbetween.html) Para cortar las series de tiempo 
+
+
 ## Calculo de hidroperiodo (Duración, Promedio  Frecuencia)<a name="id7"></a>
 ## Análisis de espectros <a name="id8"></a>
 
