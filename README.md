@@ -81,8 +81,25 @@ Se observa que los datos cuentan con una <em><strong>Frecuencia de muestreo de 1
 ## Fundamentos de Matlab <a name="id3"></a>
 ## Funciones especiales <a name="id4"></a>
 ## Inspección series de tiempo <a name="id5"></a>
-Ahora podemos comenzar a analizar las series de tiempo. 
 
+Ahora podemos comenzar a analizar las series de tiempo. Para esto vamos a utilizar el codigo S01_Limpieza de datos 
+
+1)  Comenzamos abriendo los datos de nivel de manglar que exportamos a .csv con el HOBBOware
+  
+`Chp=readtimetable("./01_datos/csv/Chaparro_2020_2021/Chaparro_todos2020_2021.csv");` 
+
+Vamos a utilizar la función `readtimetable` esto nos permitirá terner accesos a funciones especiales de MATLAB que nos facilitarán la visualización de los datos. 
+Esto abre el archivo y lo carga en el espacio de trabajo 
+
+2) Inspeccionamos el archivo importado. Vemos que las columnas estan bien pero  tiene un error en la fecha. Esto lo sabemos porque el sensor fue colocado en 2020 y la fecha que muestra es 0020
+
+Para poder hacer correciones de fechas podemos hacer una variable `y` que sea igual al numero de años que tiene de error el archivo importado, en este caso 2000 años 
+
+`y=years(2000);`
+
+3) Sumamos `y` a la `tabla de tiempo`. Esto lo que hace es sumar los 2000 años faltantes a todas a la fecha 
+
+`Chp.FechaTiempo_GMT_06_00=Chp.FechaTiempo_GMT_06_00+y;`
 
 
 
