@@ -2,6 +2,9 @@
 
 Este repositorio buscar ser un manual de referencia para la caracterización del <em><strong> hidroperiodo </strong></em> de manglares considerando las tres variables del hidroperiodo; nivel promedio de inundación (cm/mes), duración (h/mes), frecuencia (eventos/mes), así como espectro de frecuencias, utilizando series de tiempo de sensores de presión Hobbo. Así como una guía para limpiar e integrar datos del Estaciones Meteorológicas Automáticas (EMAs), datos del Servicio Mareográfico Nacional y niveles de manglar con datos del Laboratorio de Producción Primaria del CINVESTAV Mérida (LLP-Mid).
 
+### Antes de comenzar descarga los siguientes programas 
+- [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware) podemos importar los archvios de formato .hobbo 
+- [Matlab](https://la.mathworks.com/?s_tid=gn_logo)
 ## Indice 
 **Índice**   
 1. [Introducción ](#id1)
@@ -23,9 +26,20 @@ La descripción de las variables del hidroperiodo a partir de datos generados po
 
 ## Descarga de datos <a name="id2"></a>
 ### Datos de presión HOBBO 
-Antes de comenrzar a realizar el análisis de datos se requien obtener datos confiables sobree el área de estudio. En el caso de niveles de inundación de manglares, estos datos corresponde a los que son recuperados de datos gracias a los intrumentos colocados con antelación. 
+Antes de comenrzar a realizar el análisis de datos se requien obtener datos confiables sobree el área de estudio. En el caso de niveles de inundación de manglares, estos datos corresponde a los que son recuperados de datos gracias a los intrumentos colocados con antelación. En el caso de datos de sensores de presión de la marca Hobbo los datos se pueden recuperar del sensor utilizando la lanzadera del instrumento y utilizando el software [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware). 
 
-En el caso de datos de sensores de presión de la marca Hobbo los datos se pueden recuperar del sensor utilizando la lanzadera del instrumento y utilizando el software [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware). 
+Dentro del [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware) podemos abrir los archivos .hobbo. Para esto se selecciona el archvio .hobbo dentro del navegador de HOBOware 
+
+
+
+La primera ventana que nos aparece corresponde a las unidades de medida que se usaran para importar los datos. En este caso los datos corresponden a presión y temperatura. Por conveción los datos de presión deben ser medidos en mbar y los de temperatura en °C. Lo anterior permite trabajar con datos de estaciones meteorologicas con mayor fácilidad. 
+
+
+
+Una ves que seleccionamos las unidades HOBOware nos mostrara una grafica de los datos de presión y temperatura en el tiempo, nos indicará la fecha inicio y fin de recolección de datos asi. En este punto se pueden comenzar a ver puntos en donde se realizaron errores en las mediciones (p ej. cambios abruptos de presión, falta de datos, patrones anomalos) 
+
+
+
 
 
 
