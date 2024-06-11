@@ -4,9 +4,8 @@ Este repositorio buscar ser un manual de referencia para la caracterización del
 
 > [!IMPORTANT]
 > Antes de comenzar debes instalar los siguientes programas
-> - [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware) podemos importar los archvios de formato .hobbo
-> - [Matlab](https://la.mathworks.com/?s_tid=gn_logo)
-
+> - [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware) Para abrir archvios de formato .hobbo
+> - [Matlab](https://la.mathworks.com/?s_tid=gn_logo) Para limpieza y analisis de datos 
 
 
 ## Indice 
@@ -30,19 +29,21 @@ La descripción de las variables del hidroperiodo a partir de datos generados po
 
 ## Descarga de datos <a name="id2"></a>
 ### Datos de presión HOBBO 
-Antes de comenrzar a realizar el análisis de datos se requien obtener datos confiables sobree el área de estudio. En el caso de niveles de inundación de manglares, estos datos corresponde a los que son recuperados de datos gracias a los intrumentos colocados con antelación. En el caso de datos de sensores de presión de la marca Hobbo los datos se pueden recuperar del sensor utilizando la lanzadera del instrumento y utilizando el software [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware). 
+
+Antes de comenzar a realizar el análisis de datos se requien obtener datos confiables sobree el área de estudio. En el caso de niveles de inundación de manglares, estos datos corresponde a los que son recuperados de datos gracias a los intrumentos colocados con antelación. Estos sensores pueden ser de dos tipos: nivel de presión inundación (HOBO Water Level Data Logger), y presión atmosferica (hobo barometric pressure logger). El primero consta de un sensor que se coloca por debajo del nivel de agua y mide presión total (presión atmosferica + presión del nivel de agua), el segundo mide exclusivamente presión atmosferica. En un caso ideal ambos sensores se encuentran operando al mismo tiempo.    
+
+En el caso de datos de sensores de la marca Hobbo los datos se pueden recuperar del sensor utilizando la lanzadera optica del instrumento y  el software [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware). 
+
 
 Dentro del [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware) podemos abrir los archivos .hobbo. Para esto se selecciona el archvio .hobbo dentro del navegador de HOBOware 
-
 ![hola](./01.png)
 
-La primera ventana que nos aparece corresponde a las unidades de medida que se usaran para importar los datos. En este caso los datos corresponden a presión y temperatura. Por conveción los datos de presión deben ser medidos en mbar y los de temperatura en °C. Lo anterior permite trabajar con datos de estaciones meteorologicas con mayor fácilidad. 
+La primera ventana que nos aparece corresponde a las unidades de medida que se usaran para importar los datos. En este caso los datos corresponden a presión y temperatura. Por conveción, los datos de presión deben ser medidos en mbar y los de temperatura en °C. Lo anterior permite trabajar con datos de estaciones meteorologicas con mayor fácilidad.  
 
+En este punto si contamos con datos del sensor de presión atmosferica (hobo barometric pressure logger)  podemos usar la opción Asistente de datos que compensara el nivel de inundación  con los datos de presión atmosferica. Si no se cuenta con ese dato de compensación se puede seguir sin problemas. 
 ![hola](./02.png)
 
-Una ves que seleccionamos las unidades HOBOware nos mostrara una grafica de los datos de presión y temperatura en el tiempo, nos indicará la fecha inicio y fin de recolección de datos asi. En este punto se pueden comenzar a ver puntos en donde se realizaron errores en las mediciones (p ej. cambios abruptos de presión, falta de datos, patrones anomalos) 
-
-
+Una ves que seleccionamos las unidades HOBOware y compensamos (si es posible)  nos mostrara una grafica de los datos de presión y temperatura en el tiempo, nos indicará la fecha inicio y fin de recolección de datos asi. En este punto se pueden comenzar a ver puntos en donde se realizaron errores en las mediciones (p ej. cambios abruptos de presión, falta de datos, patrones anomalos) 
 ![hola](./03.png)
 
 
@@ -54,19 +55,26 @@ Al visualizar los datos en HOBBOware ya es posible exportarlos a un formato tipo
 
 
 ### Datos estaciones meteorologicas 
-En caso de no contar con datos de sensores de presión se puede recurir a mediciones realizadas por estaciones meteórologicas localizadas en sitios cercanos. En el caso de estaciones externas se pueden enriquecer en analiz de datos al integrar  variables meteorologicas como Dirección del viento, velocidad del viento, precipitación,  humedad, y  temperatura aire. En el caso de México se recomienda tomar en cuenta las siguienes fuentes de información; 
+En caso de no contar con datos de sensores de presión (hobo barometric pressure logger) se puede recurir a mediciones realizadas por estaciones meteórologicas localizadas en sitios cercanos. En el caso de estaciones externas esto puede enriquecer en analisis de los datos al integrar variables meteorologicas como Dirección del viento, velocidad del viento, precipitación, humedad, y  temperatura aire. En el caso de México se recomienda tomar en cuenta las siguienes fuentes de información; 
 
 - [Servicio Meteorologico Nacional](https://smn.conagua.gob.mx/es/?option=com_content&view=article&id=38&Itemid=102) 
 - [Red Universitaria de Observatorios Atmosféricos - UNAM](https://ruoa.unam.mx/)
 - [Servicio Mareográfico Nacional – SMN del IGEF, UNAM](https://chalchiuhtlicue.geofisica.unam.mx/)
 
-Cada una de las basase de datos mencionadas cuenta con frecuencia de muestreo, variables medidas, periodo de datos que varian por institución o estación de muestreo. Así mismo, cada una tiene diferentes formas de acceso a los datos. En el caso de [Servicio Meteorologico Nacional](https://smn.conagua.gob.mx/es/?option=com_content&view=article&id=38&Itemid=102)  los datos están dispobles en su base de datos hasta por 90 días, despues de los cuales se debe realizar una solicitud por correo a CONAGUA para obtener datos historicos. Por otra parte, [Servicio Mareográfico Nacional – SMN del IGEF, UNAM](https://chalchiuhtlicue.geofisica.unam.mx/) pone a disposición sus datos por medio de su correo llenando formatos que proporcionan en su pagina. 
 
 
-Un ejemplo de bases de datos es la siguientes
+> [!TIP]
+> Cada una de las basase de datos mencionadas cuenta con frecuencia de muestreo, variables medidas, periodo de datos que varian por institución o estación de muestreo. Así mismo, cada una tiene diferentes formas de acceso a los datos. En el caso de [Servicio Meteorologico Nacional](https://smn.conagua.gob.mx/es/?option=com_content&view=article&id=38&Itemid=102)  los datos están dispobles en su base de datos hasta por 90 días, despues de los cuales se debe realizar una solicitud por correo a CONAGUA para obtener datos historicos. Por otra parte, [Servicio Mareográfico Nacional – SMN del IGEF, UNAM](https://chalchiuhtlicue.geofisica.unam.mx/) pone a disposición sus datos por medio de su correo llenando formatos que proporcionan en su pagina. 
+
+En el caso de los servicios mencionados anteriormente los datos son proporcionados en formato .cvs que se puede visualizar facilmente utilizando Excel 
+Un ejemplo de bases de datos es la siguiente obtenida de CONAGUA 
+
 ![hola](./04.png)
 
-<em><strong>Frecuencia de muestreo de 10 min,</em></strong> Dirección del Viento	Dirección de ráfaga (grados)	Rapidez de viento (km/h)	Rapidez de ráfaga (km/h)	Temperatura del Aire (°C)	Humedad relativa (%)	Presión Atmosférica (hpa)	Precipitación (mm)
+Se observa que los datos cuentan con una <em><strong>Frecuencia de muestreo de 10 min,</em></strong> se incluye información de Dirección del Viento	Dirección de ráfaga (grados)	Rapidez de viento (km/h)	Rapidez de ráfaga (km/h)	Temperatura del Aire (°C)	Humedad relativa (%)	Presión Atmosférica (hpa)	Precipitación (mm)
+
+> [!NOTE]
+> 1 mbar = 1 hPa. Esto nos permite trabajar con datos de presión de los sensores HOBBO sin mayores conversiones
 
 
 
