@@ -30,7 +30,7 @@ Antes de comenrzar a realizar el análisis de datos se requien obtener datos con
 
 Dentro del [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware) podemos abrir los archivos .hobbo. Para esto se selecciona el archvio .hobbo dentro del navegador de HOBOware 
 
-
+![hola](./01.png)
 
 La primera ventana que nos aparece corresponde a las unidades de medida que se usaran para importar los datos. En este caso los datos corresponden a presión y temperatura. Por conveción los datos de presión deben ser medidos en mbar y los de temperatura en °C. Lo anterior permite trabajar con datos de estaciones meteorologicas con mayor fácilidad. 
 
