@@ -101,6 +101,15 @@ Para poder hacer correciones de fechas podemos hacer una variable `y` que sea ig
 
 `Chp.FechaTiempo_GMT_06_00=Chp.FechaTiempo_GMT_06_00+y;`
 
+4) Podemos gráficar los datos
+
+Para graficar usamos  la función `plot`. Con el siguiente orden `plot( eje x, eje y, Color y forma)`
+
+`plot(Chp.FechaTiempo_GMT_06_00,Chp.PresAbs_Mbar_LGRS_N_20081786_duplicate_duplicate_duplicate_SENS,'r')`
+
+En este caso `Chp.FechaTiempo_GMT_06_00` es tiempo y `Chp.PresAbs_Mbar_LGRS_N_20081786_duplicate_duplicate_duplicate_SENS` es eje Y datos de presion, mientras `'r'` es color rojo para la grafica 
+
+5) 
 
 
 ## Corrección series de tiempo <a name="id6"></a>
