@@ -121,14 +121,21 @@ Se obtiene la siguiente grafica:
 ![Grafica Chaparro](./05.png)
 
 En el caso de sitio Peten se observa los siguiente 
-![Grafica Chaparro](./08.png)
+![Grafica peten](./08.png)
 
 > [!CAUTION]
-> Se puede ver como hay picos anomalos que distorcionan la escala de la imagen. Tambien se observa que las series de tiempo no abarcan los mismo espacios de tiempo. Por lo anterior se deben corregir los picos anomalos y buscar un intervalo de tiempo común para las series de tiempo 
-
-
+> Se puede ver como hay picos anomalos que distorcionan la escala de la imagen. Tambien se observa que las series de tiempo no abarcan los mismo espacios de tiempo y que hay datos ausentes.  Por lo anterior se deben corregir las series de tiempo 
 
 ## Corrección series de tiempo <a name="id6"></a>
+
+La correción de la serie de tiempo debe realizarse con una idea clara de que elementos se quieren conservar y cuales se quieren eliminar. En el caso del los datos de manglares debemos preservar las variaciones de nivel de inundación que ocurren de manera rápida por precipitación, nortes, descargas subterraneas, así como las variaciones de baja frecuencia como son los patrones estacionales. En el caso del sitio Pet:
+![Grafica peten](./08.png)
+
+Se puede observar que los datos tiene dos tipos de errores: 
+- Picos anómalo (outliers) a lo largo de la serie de tiempo. Estos pudieron ser resultado de manipulación del equipo o por errores en el sensor
+- Ausencia de datos (NaN y NaT) que pueden ser resultado de errores de softwate o equipo
+
+
 ## Calculo de hidroperiodo (Duración, Promedio  Frecuencia)<a name="id7"></a>
 ## Análisis de espectros <a name="id8"></a>
 
