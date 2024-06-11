@@ -51,6 +51,13 @@ En caso de no contar con datos de sensores de presión se puede recurir a medici
 Cada una de las basase de datos mencionadas cuenta con frecuencia de muestreo, variables medidas, periodo de datos que varian por institución o estación de muestreo. Así mismo, cada una tiene diferentes formas de acceso a los datos. En el caso de [Servicio Meteorologico Nacional](https://smn.conagua.gob.mx/es/?option=com_content&view=article&id=38&Itemid=102)  los datos están dispobles en su base de datos hasta por 90 días, despues de los cuales se debe realizar una solicitud por correo a CONAGUA para obtener datos historicos. Por otra parte, [Servicio Mareográfico Nacional – SMN del IGEF, UNAM](https://chalchiuhtlicue.geofisica.unam.mx/) pone a disposición sus datos por medio de su correo llenando formatos que proporcionan en su pagina. 
 
 
+Un ejemplo de bases de datos es la siguientes
+![hola](./04.png)
+
+<em><strong>Frecuencia de muestreo de 10 min,</em></strong> Dirección del Viento	Dirección de ráfaga (grados)	Rapidez de viento (km/h)	Rapidez de ráfaga (km/h)	Temperatura del Aire (°C)	Humedad relativa (%)	Presión Atmosférica (hpa)	Precipitación (mm)
+
+
+
 ## Fundamentos de Matlab <a name="id3"></a>
 ## Funciones especiales <a name="id4"></a>
 ## Inspección series de tiempo <a name="id5"></a>
