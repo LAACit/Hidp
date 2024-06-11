@@ -84,11 +84,10 @@ Se observa que los datos cuentan con una <em><strong>Frecuencia de muestreo de 1
 
 Ahora podemos comenzar a analizar las series de tiempo. Para esto vamos a utilizar el codigo S01_Limpieza de datos 
 
-1) Comenzamos abriendo los datos de nivel de manglar que exportamos a .csv con el HOBBOware
+1) Comenzamos abriendo los datos de nivel de manglar que exportamos a .csv con el HOBBOware. Para cada uno de los archvios. Vamos a utilizar la función `readtimetable` y la ruta donde esta el archvio.  Esto nos permitirá tener accesos a funciones especiales de MATLAB que nos facilitarán la visualización de los datos. 
   
 `Chp=readtimetable("./01_datos/csv/Chaparro_2020_2021/Chaparro_todos2020_2021.csv");` 
 
-Vamos a utilizar la función `readtimetable` esto nos permitirá terner accesos a funciones especiales de MATLAB que nos facilitarán la visualización de los datos. 
 Esto abre el archivo y lo carga en el espacio de trabajo 
 
 2) Inspeccionamos el archivo importado. Vemos que las columnas estan bien pero  tiene un error en la fecha. Esto lo sabemos porque el sensor fue colocado en 2020 y la fecha que muestra es 0020
@@ -113,7 +112,7 @@ Se obtiene la siguiente grafica:
 
 ![Grafica Chaparro](./05.png)
 
-> [!NOTE]
+> [!CAUTION]
 > Se puede ver como hay picos anomalos que distorcionan la escala de la imagen. Tambien se observa que las series de tiempo no abarcan los mismo espacios de tiempo. Por lo anterior se deben corregir los picos anomalos y buscar un intervalo de tiempo común para las series de tiempo 
 
 
