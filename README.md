@@ -25,6 +25,13 @@ La descripción de las variables del hidroperiodo a partir de datos generados po
 ### Datos de presión HOBBO 
 Antes de comenrzar a realizar el análisis de datos se requien obtener datos confiables sobree el área de estudio. En el caso de niveles de inundación de manglares, estos datos corresponde a los que son recuperados de datos gracias a los intrumentos colocados con antelación. 
 
+En el caso de datos de sensores de presión de la marca Hobbo los datos se pueden recuperar del sensor utilizando la lanzadera del instrumento y utilizando el software [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware). 
+
+
+
+
+
+
 ### Datos estaciones meteorologicas 
 En caso de no contar con datos de sensores de presión se puede recurir a mediciones realizadas por estaciones meteórologicas localizadas en sitios cercanos. En el caso de estaciones externas se pueden enriquecer en analiz de datos al integrar  variables meteorologicas como Dirección del viento, velocidad del viento, precipitación,  humedad, y  temperatura aire. En el caso de México se recomienda tomar en cuenta las siguienes fuentes de información; 
 
