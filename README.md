@@ -22,6 +22,18 @@ En el caso de la frecuencia  y duración de inundación existen diversas métric
 La descripción de las variables del hidroperiodo a partir de datos generados por sensores de presión y mediciones de campo han permitido reconocer variaciones naturales, así como cambios originados por la actividad humana. Adicionalmente, en los últimos años el hidroperiodo ha sido caracterizado con nuevas técnicas y tecnologías como los análisis de espectros, imágenes satelitales o el uso de LiDar lo que ha permitido complementar los estudios de este ecosistema.
 
 ### Descarga de datos <a name="id2"></a>
+Antes de comenrzar a realizar el análisis de datos se requien obtener datos confiables sobree el área de estudio. En el caso de niveles de inundación de manglares, estos datos corresponde a los que son recuperados de datos gracias a los intrumentos colocados con antelación. 
+
+
+En caso de no contar con datos de sensores de presión se puede recurir a mediciones realizadas por estaciones meteórologicas localizadas en sitios cercanos. En el caso de estaciones externas se pueden enriquecer en analiz de datos al integrar  variables meteorologicas como Dirección del viento, velocidad del viento, precipitación,  humedad, y  temperatura aire. En el caso de México se recomienda tomar en cuenta las siguienes fuentes de información; 
+
+- [Servicio Meteorologico Nacional](https://smn.conagua.gob.mx/es/?option=com_content&view=article&id=38&Itemid=102) 
+- [Red Universitaria de Observatorios Atmosféricos - UNAM](https://ruoa.unam.mx/)
+- [Servicio Mareográfico Nacional – SMN del IGEF, UNAM](https://chalchiuhtlicue.geofisica.unam.mx/)
+
+Cada una de las basase de datos mencionadas cuenta con frecuencia de muestreo, variables medidas, periodo de datos que varian por institución o estación de muestreo. Así mismo, cada una tiene diferentes formas de acceso a los datos. En el caso de [Servicio Meteorologico Nacional](https://smn.conagua.gob.mx/es/?option=com_content&view=article&id=38&Itemid=102)  los datos están dispobles en su base de datos hasta por 90 días, despues de los cuales se debe realizar una solicitud por correo a CONAGUA para obtener datos historicos. Por otra parte, [Servicio Mareográfico Nacional – SMN del IGEF, UNAM](https://chalchiuhtlicue.geofisica.unam.mx/) pone a disposición sus datos por medio de su correo llenando formatos que proporcionan en su pagina. 
+
+
 ### Fundamentos de Matlab <a name="id3"></a>
 ### Funciones especiales <a name="id4"></a>
 ### Inspección series de tiempo <a name="id5"></a>
