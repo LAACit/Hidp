@@ -2,9 +2,13 @@
 
 Este repositorio buscar ser un manual de referencia para la caracterización del <em><strong> hidroperiodo </strong></em> de manglares considerando las tres variables del hidroperiodo; nivel promedio de inundación (cm/mes), duración (h/mes), frecuencia (eventos/mes), así como espectro de frecuencias, utilizando series de tiempo de sensores de presión Hobbo. Así como una guía para limpiar e integrar datos del Estaciones Meteorológicas Automáticas (EMAs), datos del Servicio Mareográfico Nacional y niveles de manglar con datos del Laboratorio de Producción Primaria del CINVESTAV Mérida (LLP-Mid).
 
-### Antes de comenzar descarga los siguientes programas 
-- [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware) podemos importar los archvios de formato .hobbo 
-- [Matlab](https://la.mathworks.com/?s_tid=gn_logo)
+> [!IMPORTANT]
+> Antes de comenzar debes instalar los siguientes programas
+> - [HOBOware Software](https://www.onsetcomp.com/products/software/hoboware) podemos importar los archvios de formato .hobbo
+> - [Matlab](https://la.mathworks.com/?s_tid=gn_logo)
+
+
+
 ## Indice 
 **Índice**   
 1. [Introducción ](#id1)
@@ -40,6 +44,14 @@ Una ves que seleccionamos las unidades HOBOware nos mostrara una grafica de los 
 
 
 ![hola](./03.png)
+
+
+Al visualizar los datos en HOBBOware ya es posible exportarlos a un formato tipo .csv. Esto se hace utiliza Archivo -> Exportador datos de tabla. Al hacer click se abre pestaña donde nos mostrará las columnas de datos que se van a exportar y posteriormente  podemos seleccionar la carpeta para almacenar los datos
+
+> [!TIP]
+> Almacena todos los archivos exportados dentro de la misma carpeta respetando nombre del archvio
+
+
 
 ### Datos estaciones meteorologicas 
 En caso de no contar con datos de sensores de presión se puede recurir a mediciones realizadas por estaciones meteórologicas localizadas en sitios cercanos. En el caso de estaciones externas se pueden enriquecer en analiz de datos al integrar  variables meteorologicas como Dirección del viento, velocidad del viento, precipitación,  humedad, y  temperatura aire. En el caso de México se recomienda tomar en cuenta las siguienes fuentes de información; 
