@@ -81,6 +81,11 @@ Se observa que los datos cuentan con una <em><strong>Frecuencia de muestreo de 1
 ## Fundamentos de Matlab <a name="id3"></a>
 ## Funciones especiales <a name="id4"></a>
 ## Inspección series de tiempo <a name="id5"></a>
+Ahora podemos comenzar a analizar las series de tiempo. 
+
+
+
+
 ## Corrección series de tiempo <a name="id6"></a>
 ## Calculo de hidroperiodo (Duración, Promedio  Frecuencia)<a name="id7"></a>
 ## Análisis de espectros <a name="id8"></a>
