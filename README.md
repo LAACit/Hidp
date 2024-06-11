@@ -91,7 +91,11 @@ Ejemplo;
 
 Esto abre el archivo y lo carga en el espacio de trabajo.
 
-2) Inspeccionamos el archivo importado. Vemos que las columnas estan bien pero  tiene un error en la fecha. Esto lo sabemos porque el sensor fue colocado en 2020 y la fecha que muestra es 0020
+2) Inspeccionamos el archivo importado. Vemos que las columnas estan bien pero  tiene un error en la fecha.
+
+![Error tiempo ](./06.png)
+  
+ Esto lo sabemos porque el sensor fue colocado en 2020 y la fecha que muestra es 0020
 Para poder hacer correciones de fechas podemos hacer una variable `y` que sea igual al numero de años que tiene de error el archivo importado, en este caso 2000 años 
 
 `y=years(2000);`
