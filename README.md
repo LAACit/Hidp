@@ -22,10 +22,10 @@ En el caso de la frecuencia  y duración de inundación existen diversas métric
 La descripción de las variables del hidroperiodo a partir de datos generados por sensores de presión y mediciones de campo han permitido reconocer variaciones naturales, así como cambios originados por la actividad humana. Adicionalmente, en los últimos años el hidroperiodo ha sido caracterizado con nuevas técnicas y tecnologías como los análisis de espectros, imágenes satelitales o el uso de LiDar lo que ha permitido complementar los estudios de este ecosistema.
 
 ## Descarga de datos <a name="id2"></a>
-#Datos de presión HOBBO 
+# Datos de presión HOBBO 
 Antes de comenrzar a realizar el análisis de datos se requien obtener datos confiables sobree el área de estudio. En el caso de niveles de inundación de manglares, estos datos corresponde a los que son recuperados de datos gracias a los intrumentos colocados con antelación. 
 
-#Datos estaciones meteorologicas 
+# Datos estaciones meteorologicas 
 En caso de no contar con datos de sensores de presión se puede recurir a mediciones realizadas por estaciones meteórologicas localizadas en sitios cercanos. En el caso de estaciones externas se pueden enriquecer en analiz de datos al integrar  variables meteorologicas como Dirección del viento, velocidad del viento, precipitación,  humedad, y  temperatura aire. En el caso de México se recomienda tomar en cuenta las siguienes fuentes de información; 
 
 - [Servicio Meteorologico Nacional](https://smn.conagua.gob.mx/es/?option=com_content&view=article&id=38&Itemid=102) 
