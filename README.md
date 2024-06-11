@@ -120,6 +120,9 @@ Se obtiene la siguiente grafica:
 
 ![Grafica Chaparro](./05.png)
 
+En el caso de sitio Peten se observa los siguiente 
+![Grafica Chaparro](./08.png)
+
 > [!CAUTION]
 > Se puede ver como hay picos anomalos que distorcionan la escala de la imagen. Tambien se observa que las series de tiempo no abarcan los mismo espacios de tiempo. Por lo anterior se deben corregir los picos anomalos y buscar un intervalo de tiempo común para las series de tiempo 
 
