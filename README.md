@@ -143,7 +143,12 @@ Para poder hacer la correcion de los datos vamos a utilizar las siguientes funci
 - [isbetween](https://la.mathworks.com/help/matlab/ref/datetime.isbetween.html) Para cortar las series de tiempo 
 
 
+En este caso vamos a utilizar la serie de tiempo de datos de manglar de dos sitios;  <em><strong>sitio A </em></strong> y  <em><strong>sito B </em></strong> así como la serie de tiempo de sensor de  <em><strong>presión atmosferica </em></strong>.
+
+
+
 ## Calculo de hidroperiodo (Duración, Promedio  Frecuencia)<a name="id7"></a>
+
 ## Análisis de espectros <a name="id8"></a>
 
 
