@@ -192,11 +192,15 @@ Una vez que el scrip recibe ambas entradas hace el calculo del hidroperiodo y re
 
 
 
+![Grafica peten](./11.png)
 
 
 ``Columna 5``: Duración de inundación h/mes 
+
 ``Columna 6``: Frecuencia de inundación Eventos/mes
+
 ``Columna 7``: Nivel promedio inundación cm/mes 
+
 
 Cada fila representa un mes. Fila 1; Enero, Fila 2; Febrero, Fila3; Marzo... ETC 
 
