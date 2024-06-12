@@ -158,7 +158,12 @@ En este caso las unidades de variables serán las siguientes
 
 Para el calculo de hidroperiodo se va a utilizar el scrip `S02_Hidroperiodo` Este scrip hace el calculo de las tres variables para cada mes dentro de un año tomando como formato de ingreso la matriz que es resultado del scrip `S01_limpieza`
 
+La matriz de ingreso debe tener el siguiente formato:
 
+![Grafica peten](./09.png)
+
+Donde las columnas representan 
+"AÑO" "MES" "DIA" "HORA" "MINUTO" "SEGUNDO" "NIVEL DE INUNDACIÓN"
 
 
 
