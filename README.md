@@ -164,6 +164,45 @@ La matriz de ingreso debe tener el siguiente formato:
 
 Donde las columnas representan 
 "AÑO" "MES" "DIA" "HORA" "MINUTO" "SEGUNDO" "NIVEL DE INUNDACIÓN"
+se pueden tener muchas columans despues de segundo que representen los niveles de inundación. 
+
+### Abrir datos
+La primera sección del codigo abre los datos. 
+
+En este punto se puede seleccionar el sitio de interés modificando el ultimo valor `X`
+
+`df=datos(:,[1:6,X]);` 
+
+`X` puede ser sutituido por el numero de columna de los datos. Por ejemplo, nuestro sitio de interés esta en la columna 9 
+
+`df=datos(:,[1:6,9]);` 
+
+A continuación se grafican los datos seleccionados 
+
+Posteriormente, el scrip separa las matriz y genera un archivo `cell` en donde se almacenaran los datos y los resultados del hidroperiodo
+
+El scrip nos pedira el año para calcular el Hp 
+
+`ano=year{X,2}; `
+
+`X` puede ser sutituido por el numero de la posción de nuestro año de interés. Por ejemplo, nuestro sitio de interés esta en la columna 2 
+
+
+Una vez que el scrip recibe ambas entradas hace el calculo del hidroperiodo y regresa una matriz con la información ordenada 
+
+
+
+
+
+``Columna 5``: Duración de inundación h/mes 
+``Columna 6``: Frecuencia de inundación Eventos/mes
+``Columna 7``: Nivel promedio inundación cm/mes 
+
+Cada fila representa un mes. Fila 1; Enero, Fila 2; Febrero, Fila3; Marzo... ETC 
+
+>[!NOTE]
+>Esto se hace sólo por un año, si se tiene una serie de tiempo que cruza por dos años se debe correr el scrip dos veces
+
 
 
 
