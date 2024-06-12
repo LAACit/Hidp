@@ -149,16 +149,15 @@ En este caso vamos a utilizar la serie de tiempo de datos de manglar de dos siti
 
 ## Calculo de hidroperiodo (Duración, Promedio  Frecuencia)<a name="id7"></a>
 
-El calculo del hidroperiodo consiste en la caracterización de tres variables; Duración, como el numero de horas en las que el humedal esta inundado sobre el nivel del suelo en un tiempo definido; Promedio, el nivel promedio de inundación en un tiempo definido; y Frecuencia, la cual se refiere al numero promedio de veces que el humedal es inundado  en un periodo de tiempo conocido. 
+Para el calculo de hidroperiodo se va a utilizar el scrip `S02_Hidroperiodo` Este scrip hace el calculo de las tres variables para cada mes dentro de un año tomando como formato de ingreso la matriz que es resultado del scrip `S01_limpieza`
 
 En este caso las unidades de variables serán las siguientes 
 - Duración: h/mes 
 - Promedio: cm/mes 
 - Frecuencia: Inundaciones/mes
 
-Para el calculo de hidroperiodo se va a utilizar el scrip `S02_Hidroperiodo` Este scrip hace el calculo de las tres variables para cada mes dentro de un año tomando como formato de ingreso la matriz que es resultado del scrip `S01_limpieza`
 
-La matriz de ingreso debe tener el siguiente formato:
+La matriz de ingreso para `S02_Hidroperiodo` debe tener el siguiente formato:
 
 ![Grafica peten](./09.png)
 
@@ -178,6 +177,8 @@ En este punto se puede seleccionar el sitio de interés modificando el ultimo va
 `df=datos(:,[1:6,9]);` 
 
 A continuación se grafican los datos seleccionados 
+
+![Grafica peten](./10.png)
 
 Posteriormente, el scrip separa las matriz y genera un archivo `cell` en donde se almacenaran los datos y los resultados del hidroperiodo
 
