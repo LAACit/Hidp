@@ -150,21 +150,24 @@ En este caso vamos a utilizar la serie de tiempo de datos de manglar de dos siti
 
 ## Calculo de hidroperiodo (Duración, Promedio  Frecuencia)<a name="id7"></a>
 
-Para el calculo de hidroperiodo se va a utilizar el scrip `S02_Hidroperiodo` Este scrip hace el calculo de las tres variables para cada mes dentro de un año tomando como formato de ingreso la matriz que es resultado del scrip `S01_limpieza`
+Para el calculo de hidroperiodo se va a utilizar el scrip `S02_Hidroperiodo` Este scrip hace el calculo de las tres variables del hidroperiodo para cada mes dentro de un año. Para esto el scrip realiza una serie de ciclos `for` y condicionantes `if` para identificar y cuantificar las inundaciones en el humedal 
 
-En este caso las unidades de variables serán las siguientes 
+El scrip `S02_Hidroperiodo` calculara las siguientes variables para cada mes con datos: 
 - Duración: h/mes 
 - Promedio: cm/mes 
 - Frecuencia: Inundaciones/mes
 
 
+### Datos de ingreso 
 La matriz de ingreso para `S02_Hidroperiodo` debe tener el siguiente formato:
 
 ![Grafica peten](./09.png)
 
-Donde las columnas representan 
-"AÑO" "MES" "DIA" "HORA" "MINUTO" "SEGUNDO" "NIVEL DE INUNDACIÓN"
-se pueden tener muchas columans despues de segundo que representen los niveles de inundación. 
+Donde las columnas representan:
+
+``"AÑO"|"MES"|"DIA"|"HORA"|"MINUTO"|"SEGUNDO"|"NIVEL DE INUNDACIÓN"``
+
+A partir de la columna 7 se pueden tener muchas otras columnas que representen diferentes sitios
 
 ### Abrir datos
 La primera sección del codigo abre los datos. 
@@ -181,13 +184,13 @@ A continuación se grafican los datos seleccionados
 
 ![Grafica peten](./10.png)
 
-Posteriormente, el scrip separa las matriz y genera un archivo `cell` en donde se almacenaran los datos y los resultados del hidroperiodo
-
-El scrip nos pedira el año para calcular el Hp 
+Posteriormente, el scrip nos pedira señalar la posición del año para calcular el Hp 
 
 `ano=year{X,2}; `
 
 `X` puede ser sutituido por el numero de la posción de nuestro año de interés. Por ejemplo, nuestro sitio de interés esta en la columna 2 
+
+`ano=year{2,2}; `
 
 
 Una vez que el scrip recibe ambas entradas hace el calculo del hidroperiodo y regresa una matriz con la información ordenada 
