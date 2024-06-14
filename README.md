@@ -196,7 +196,6 @@ Posteriormente, el scrip nos pedira señalar la posición del año para calcular
 Una vez que el scrip recibe ambas entradas hace el calculo del hidroperiodo y regresa una matriz con la información ordenada 
 
 
-
 ![Grafica peten](./11.png)
 
 
