@@ -147,7 +147,6 @@ Para poder hacer la correcion de los datos vamos a utilizar las siguientes funci
 En este caso vamos a utilizar la serie de tiempo de datos de manglar de dos sitios;  <em><strong>sitio A </em></strong> y  <em><strong>sito B </em></strong> así como la serie de tiempo de sensor de  <em><strong>presión atmosferica </em></strong>.
 
 
-
 ## Calculo de hidroperiodo (Duración, Promedio  Frecuencia)<a name="id7"></a>
 
 Para el calculo de hidroperiodo se va a utilizar el scrip `S02_Hidroperiodo` Este scrip hace el calculo de las tres variables del hidroperiodo para cada mes dentro de un año. Para esto el scrip realiza una serie de ciclos `for` y condicionantes `if` para identificar y cuantificar las inundaciones en el humedal. El scrip consiste en un archivo de Matlab tipo .mxl el cual tiene como proposito integrar herramientas visuales que faciliten el calculo del hidroperiodo.El scrip `S02_Hidroperiodo` calculara las siguientes variables para cada mes con datos: 
@@ -170,19 +169,20 @@ A partir de la columna 7 se pueden tener muchas otras columnas que representen d
 ### Abrir datos
 La primera sección del codigo abre la matriz de los datos. Esto se puede hacer utilizando la función `impordata` o atravez de la herramienta para importar datos de Matlab. La unica condición que se pide es que el archivo importado se le cambie el nombre a `datos`
 
-
+![Grafica peten](./15.png)
 
 En este punto se puede seleccionar el sitio de interés modificando el valor dentro de la barra. Esto lo que hace es seleccionar una columna dentro de la matriz, la columna que se seleccione corresponde al nivel de inundación en el sitio de interés. 
 
 Al seleccionar la columna de interés el codigo va a generar un vector con formato de tiempo y se graficaran los datos seleccionados 
 
-![Grafica peten](./10.png)
+![Grafica peten](./16.png)
 
 Posteriormente, el scrip va a generar una serie de matrices que van a permitir identificar el numero de años que constituyen a la serie de tiempo. Y va a separar la serie de tiempo por años
 
 A continuación, el scrip nos va a mostrar en la sección de salida, los años que conforman la serie de tiempo, y nos permitirá seleccionar el año de interés. 
 
 Para la seccion del año de interés tenemos que modificar el valor del la barra, este va del 1 al 10, al seleccionar un valor se va a mostrar el año seleccionado como salida de codigo 
+![Grafica peten](./17.png)
 
 
 Una vez que el scrip tiene selecionado el sitio de interes y el año se hace el calculo del hidroperiodo y regresa una matriz con la información ordenada 
@@ -191,6 +191,8 @@ Una vez que el scrip tiene selecionado el sitio de interes y el año se hace el 
 En este script el hidroperido se calcula a partir de una serie de ciclos for y condicionantes if. Esto permite tener una idea clara de cómo esta funcionando el programa y en caso de ser necesario se pueda modificar.
 
 La duración de la inundación se calcula para cada mes a partir de un contador de horas, el cual esta condicionado a tomar en cuenta sólo aquellos valores <0 cm. Esto es, contar el numero de horas que el manglar esta inundado. El valor de la suma se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `5`
+
+![Grafica peten](./18.png)
 
 El promedio de inundación mensual se calcula tomando en cuenta todos los valores registrados por el sensor, esto incluye los que son sobre y bajo el nivel del suelo.  El valor del promedio se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `6`
 
