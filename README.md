@@ -187,16 +187,22 @@ Para la seccion del año de interés tenemos que modificar el valor del la barra
 
 Una vez que el scrip tiene selecionado el sitio de interes y el año se hace el calculo del hidroperiodo y regresa una matriz con la información ordenada 
 
-#### CALCULO DE HIDROPERIDO 
-En este script el hidroperido se calcula a partir de una serie de ciclos for y condicionantes if. Esto permite tener una idea clara de cómo esta funcionando el programa y en caso de ser necesario se pueda modificar.
-
-La duración de la inundación se calcula para cada mes a partir de un contador de horas, el cual esta condicionado a tomar en cuenta sólo aquellos valores <0 cm. Esto es, contar el numero de horas que el manglar esta inundado. El valor de la suma se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `5`
+### CALCULO DE HIDROPERIDO 
+En este script el hidroperido se calcula a partir de una serie de ciclos for y condicionantes if. Esto permite tener una idea clara de cómo esta funcionando el programa y en caso de ser necesario se pueda modificar. Los resultado del estas operaciones se van a almacenar en un dato de tipo cell llamado `mes` que tiene la siguiente estructura: 
 
 ![Grafica peten](./18.png)
 
-El promedio de inundación mensual se calcula tomando en cuenta todos los valores registrados por el sensor, esto incluye los que son sobre y bajo el nivel del suelo.  El valor del promedio se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `6`
+En donde: 
 
-La frecuencia de inundación mensual se calcula en  etapas: 
+- La duración de la inundación se calcula para cada mes a partir de un contador de horas, el cual esta condicionado a tomar en cuenta sólo aquellos valores <0 cm. Esto es, contar el numero de horas que el manglar esta inundado. El valor de la suma se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `5`
+
+- El promedio de inundación mensual se calcula tomando en cuenta todos los valores registrados por el sensor, esto incluye los que son sobre y bajo el nivel del suelo.  El valor del promedio se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `6`
+
+- La frecuencia de inundación mensual se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `7`
+
+
+Para la frecuencia se hace un calculo por etapas: 
+
 1) Se toman en consideración sólo los datos que corresponden a inundación (<0 cm). Por lo anterior, los valores ``<=0`` que representan no inundación se convierten en `0`
 
   ![hola](./19.png)
