@@ -195,15 +195,25 @@ La duración de la inundación se calcula para cada mes a partir de un contador 
 El promedio de inundación mensual se calcula tomando en cuenta todos los valores registrados por el sensor, esto incluye los que son sobre y bajo el nivel del suelo.  El valor del promedio se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `6`
 
 La frecuencia de inundación mensual se calcula en  etapas: 
-1) Se toman en consideración sólo los datos que corresponden a inundación (<0 cm). Por lo anterior, los valores ``<=0`` que representan no inundación se convierten en `0` 
-2) Se suaviza la serie de tiempo con datos >0. Esto se hace ya que se observó que a lo largo del registro hay varios picos en la señar que son muy pequeños y pueden interferir como ruido dentro del calculo de frecuencia. Esta sección queda a criterio de cada persona, ya que se puede o no suavizar la señal, o se pueden utilizar otras metodologías y ventanas para suavizar la señal. 
-3) Se identifican los maximos locales de la señal suavizada. Para identificar un evento de inundación se considera que este esta representado por el punto maximo de un incremento de nivel de inundación
-4) Se cuentan el numero de maximos locales de la señal suavizada
+1) Se toman en consideración sólo los datos que corresponden a inundación (<0 cm). Por lo anterior, los valores ``<=0`` que representan no inundación se convierten en `0`
 
+  ![hola](./19.png)
+  
+3) Se suaviza la serie de tiempo con datos >0. Esto se hace ya que se observó que a lo largo del registro hay varios picos en la señar que son muy pequeños y pueden interferir como ruido dentro del calculo de frecuencia. Esta sección queda a criterio de cada persona, ya que se puede o no suavizar la señal, o se pueden utilizar otras metodologías y ventanas para suavizar la señal. 
+
+![hola](./20.png)
+
+4) Se identifican los maximos locales de la señal suavizada. Para identificar un evento de inundación se considera que este esta representado por el punto maximo de un incremento de nivel de inundación
+
+![hola](./21.png)
+
+5) Se cuentan el numero de maximos locales de la señal suavizada
+
+![hola](./22.png)
 
 Al tener ese calculo el script muestra una grafica por mes donde se señalan los maximos locales contados en la frecuencia de inundación así como la señal original y la suavizada, esto permite reconocer si se hizó el conteo y smooth correcto o es necesario modificar la función 
 
-![Grafica peten](./11.png)
+![Grafica peten](./23.png)
 
 
 Finalmente muestra los resultado por mes; 
@@ -211,10 +221,12 @@ Finalmente muestra los resultado por mes;
 
 ``Columna 5``: Duración de inundación h/mes 
 
-``Columna 6``: Frecuencia de inundación Eventos/mes
+``Columna 6``:  Nivel promedio inundación cm/mes 
 
-``Columna 7``: Nivel promedio inundación cm/mes 
+``Columna 7``: Frecuencia de inundación Eventos/mes
 
+
+![hola](./11.png)
 
 Cada fila representa un mes. Fila 1; Enero, Fila 2; Febrero, Fila3; Marzo... ETC 
 
