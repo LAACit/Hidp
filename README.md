@@ -194,7 +194,7 @@ En este script el hidroperido se calcula a partir de una serie de ciclos for y c
 
 En donde: 
 
-- La duración de la inundación se calcula para cada mes a partir de un contador de horas, el cual esta condicionado a tomar en cuenta sólo aquellos valores <0 cm. Esto es, contar el numero de horas que el manglar esta inundado. El valor de la suma se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `5`
+- La duración de la inundación se calcula para cada mes a partir de un contador de horas, el cual esta condicionado a tomar en cuenta sólo aquellos valores >0 cm. Esto es, contar el numero de horas que el manglar esta inundado. El valor de la suma se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `5`
 
 - El promedio de inundación mensual se calcula tomando en cuenta todos los valores registrados por el sensor, esto incluye los que son sobre y bajo el nivel del suelo.  El valor del promedio se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `6`
 
@@ -203,7 +203,7 @@ En donde:
 
 Para la frecuencia se hace un calculo por etapas: 
 
-1) Se toman en consideración sólo los datos que corresponden a inundación (<0 cm). Por lo anterior, los valores ``<=0`` que representan no inundación se convierten en `0`
+1) Se toman en consideración sólo los datos que corresponden a inundación (>0 cm). Por lo anterior, los valores ``<=0`` que representan no inundación se convierten en `0`
 
   ![hola](./19.png)
   
@@ -212,14 +212,12 @@ Para la frecuencia se hace un calculo por etapas:
 ![hola](./20.png)
 
 4) Se identifican los maximos locales de la señal suavizada. Para identificar un evento de inundación se considera que este esta representado por el punto maximo de un incremento de nivel de inundación
-
+5) Se cuentan el numero de maximos locales de la señal suavizada
 ![hola](./21.png)
 
-5) Se cuentan el numero de maximos locales de la señal suavizada
 
-![hola](./22.png)
+Al finalizar le calculo de la duración, frecuencia y promedio se muestra una grafica por mes donde se señalan los maximos locales contados, la señal original y la señal suavizada, esto permite reconocer si a criterio del usuario se hizó el smooth y conteo adecuado. 
 
-Al tener ese calculo el script muestra una grafica por mes donde se señalan los maximos locales contados en la frecuencia de inundación así como la señal original y la suavizada, esto permite reconocer si se hizó el conteo y smooth correcto o es necesario modificar la función 
 
 ![Grafica peten](./23.png)
 
