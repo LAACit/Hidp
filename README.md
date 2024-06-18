@@ -63,7 +63,6 @@ En caso de no contar con datos de sensores de presión (hobo barometric pressure
 - [Servicio Mareográfico Nacional – SMN del IGEF, UNAM](https://chalchiuhtlicue.geofisica.unam.mx/)
 
 
-
 > [!TIP]
 > Cada una de las basase de datos mencionadas cuenta con frecuencia de muestreo, variables medidas, periodo de datos que varian por institución o estación de muestreo. Así mismo, cada una tiene diferentes formas de acceso a los datos. En el caso de [Servicio Meteorologico Nacional](https://smn.conagua.gob.mx/es/?option=com_content&view=article&id=38&Itemid=102)  los datos están dispobles en su base de datos hasta por 90 días, despues de los cuales se debe realizar una solicitud por correo a CONAGUA para obtener datos historicos. Por otra parte, [Servicio Mareográfico Nacional – SMN del IGEF, UNAM](https://chalchiuhtlicue.geofisica.unam.mx/) pone a disposición sus datos por medio de su correo llenando formatos que proporcionan en su pagina. 
 
@@ -231,13 +230,12 @@ Finalmente muestra los resultado por mes;
 
 ``Columna 7``: Frecuencia de inundación Eventos/mes
 
-
 ![hola](./11.png)
 
 Cada fila representa un mes. Fila 1; Enero, Fila 2; Febrero, Fila3; Marzo... ETC 
 
 >[!NOTE]
->Esto se hace sólo por un año, si se tiene una serie de tiempo que cruza por dos años se debe correr el scrip dos veces
+>Esto se hace sólo por un año, si se tiene una serie de tiempo que cruza por dos años se debe correr el scrip dos veces. Iniciando desde la selección de año (linea 26)
 
 
 
