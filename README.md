@@ -150,13 +150,11 @@ En este caso vamos a utilizar la serie de tiempo de datos de manglar de dos siti
 
 ## Calculo de hidroperiodo (Duración, Promedio  Frecuencia)<a name="id7"></a>
 
-Para el calculo de hidroperiodo se va a utilizar el scrip `S02_Hidroperiodo` Este scrip hace el calculo de las tres variables del hidroperiodo para cada mes dentro de un año. Para esto el scrip realiza una serie de ciclos `for` y condicionantes `if` para identificar y cuantificar las inundaciones en el humedal 
+Para el calculo de hidroperiodo se va a utilizar el scrip `S02_Hidroperiodo` Este scrip hace el calculo de las tres variables del hidroperiodo para cada mes dentro de un año. Para esto el scrip realiza una serie de ciclos `for` y condicionantes `if` para identificar y cuantificar las inundaciones en el humedal. El scrip consiste en un archivo de Matlab tipo .mxl el cual tiene como proposito integrar herramientas visuales que faciliten el calculo del hidroperiodo.El scrip `S02_Hidroperiodo` calculara las siguientes variables para cada mes con datos: 
 
-El scrip `S02_Hidroperiodo` calculara las siguientes variables para cada mes con datos: 
 - Duración: h/mes 
 - Promedio: cm/mes 
 - Frecuencia: Inundaciones/mes
-
 
 ### Datos de ingreso 
 La matriz de ingreso para `S02_Hidroperiodo` debe tener el siguiente formato:
