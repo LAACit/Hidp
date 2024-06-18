@@ -168,33 +168,45 @@ Donde las columnas representan:
 A partir de la columna 7 se pueden tener muchas otras columnas que representen diferentes sitios
 
 ### Abrir datos
-La primera sección del codigo abre los datos. 
+La primera sección del codigo abre la matriz de los datos. Esto se puede hacer utilizando la función `impordata` o atravez de la herramienta para importar datos de Matlab. La unica condición que se pide es que el archivo importado se le cambie el nombre a `datos`
 
-En este punto se puede seleccionar el sitio de interés modificando el ultimo valor `X`
 
-`df=datos(:,[1:6,X]);` 
 
-`X` puede ser sutituido por el numero de columna de los datos. Por ejemplo, nuestro sitio de interés esta en la columna 9 
+En este punto se puede seleccionar el sitio de interés modificando el valor dentro de la barra. Esto lo que hace es seleccionar una columna dentro de la matriz, la columna que se seleccione corresponde al nivel de inundación en el sitio de interés. 
 
-`df=datos(:,[1:6,9]);` 
-
-A continuación se grafican los datos seleccionados 
+Al seleccionar la columna de interés el codigo va a generar un vector con formato de tiempo y se graficaran los datos seleccionados 
 
 ![Grafica peten](./10.png)
 
-Posteriormente, el scrip nos pedira señalar la posición del año para calcular el Hp 
+Posteriormente, el scrip va a generar una serie de matrices que van a permitir identificar el numero de años que constituyen a la serie de tiempo. Y va a separar la serie de tiempo por años
 
-`ano=year{X,2}; `
+A continuación, el scrip nos va a mostrar en la sección de salida, los años que conforman la serie de tiempo, y nos permitirá seleccionar el año de interés. 
 
-`X` puede ser sutituido por el numero de la posción de nuestro año de interés. Por ejemplo, nuestro sitio de interés esta en la columna 2 
-
-`ano=year{2,2}; `
+Para la seccion del año de interés tenemos que modificar el valor del la barra, este va del 1 al 10, al seleccionar un valor se va a mostrar el año seleccionado como salida de codigo 
 
 
-Una vez que el scrip recibe ambas entradas hace el calculo del hidroperiodo y regresa una matriz con la información ordenada 
+Una vez que el scrip tiene selecionado el sitio de interes y el año se hace el calculo del hidroperiodo y regresa una matriz con la información ordenada 
 
+#### CALCULO DE HIDROPERIDO 
+En este script el hidroperido se calcula a partir de una serie de ciclos for y condicionantes if. Esto permite tener una idea clara de cómo esta funcionando el programa y en caso de ser necesario se pueda modificar.
+
+La duración de la inundación se calcula para cada mes a partir de un contador de horas, el cual esta condicionado a tomar en cuenta sólo aquellos valores <0 cm. Esto es, contar el numero de horas que el manglar esta inundado. El valor de la suma se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `5`
+
+El promedio de inundación mensual se calcula tomando en cuenta todos los valores registrados por el sensor, esto incluye los que son sobre y bajo el nivel del suelo.  El valor del promedio se almacena dentro de la matriz `mes` dentro del espacio correspondiente a la columna `6`
+
+La frecuencia de inundación mensual se calcula en  etapas: 
+1) Se toman en consideración sólo los datos que corresponden a inundación (<0 cm). Por lo anterior, los valores ``<=0`` que representan no inundación se convierten en `0` 
+2) Se suaviza la serie de tiempo con datos >0. Esto se hace ya que se observó que a lo largo del registro hay varios picos en la señar que son muy pequeños y pueden interferir como ruido dentro del calculo de frecuencia. Esta sección queda a criterio de cada persona, ya que se puede o no suavizar la señal, o se pueden utilizar otras metodologías y ventanas para suavizar la señal. 
+3) Se identifican los maximos locales de la señal suavizada. Para identificar un evento de inundación se considera que este esta representado por el punto maximo de un incremento de nivel de inundación
+4) Se cuentan el numero de maximos locales de la señal suavizada
+
+
+Al tener ese calculo el script muestra una grafica por mes donde se señalan los maximos locales contados en la frecuencia de inundación así como la señal original y la suavizada, esto permite reconocer si se hizó el conteo y smooth correcto o es necesario modificar la función 
 
 ![Grafica peten](./11.png)
+
+
+Finalmente muestra los resultado por mes; 
 
 
 ``Columna 5``: Duración de inundación h/mes 
