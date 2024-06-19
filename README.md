@@ -246,10 +246,12 @@ En la  primera sección del código se piden los parametros necesarios para util
 - Logitud de la señal
 - Tiempo de señal
 
+![hola](./24.png)
 Segunda sección aplica la función (fft)
+![hola](./25.png)
 
 Tercero, realiza la gráfica de la señal de frecuencia
-
+![hola](./26.png)
 
 
 
