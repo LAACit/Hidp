@@ -237,11 +237,20 @@ Cada fila representa un mes. Fila 1; Enero, Fila 2; Febrero, Fila3; Marzo... ETC
 >[!NOTE]
 >Esto se hace sólo por un año, si se tiene una serie de tiempo que cruza por dos años se debe correr el scrip dos veces. Iniciando desde la selección de año (linea 26)
 
-
-
-
-
 ## Análisis de espectros <a name="id8"></a>
+### Frecuencias (FFT) 
+Para el calculo de las frecuencias de inundación dentro de la serie de tiempo se utilizó la transformada rápida de fourier (fft) en Matlab, utilizando un calculo directo con la función mecionanda. 
+En la  primera sección del código se piden los parametros necesarios para utilizar la función 
+- Frecuencia de muestro
+- Logitud de la señal
+- Tiempo de señal
+
+Segunda sección aplica la función (fft)
+
+Tercero, realiza la gráfica de la señal de frecuencia
+
+
+
 
 
 
