@@ -240,17 +240,18 @@ Cada fila representa un mes. Fila 1; Enero, Fila 2; Febrero, Fila3; Marzo... ETC
 
 ## Análisis de espectros <a name="id8"></a>
 ### Frecuencias (FFT) 
-Para el calculo de las frecuencias de inundación dentro de la serie de tiempo se utilizó la transformada rápida de fourier (fft) en Matlab, utilizando un calculo directo con la función mecionanda. 
-En la  primera sección del código se piden los parametros necesarios para utilizar la función 
+Para el calculo de las frecuencias de inundación dentro de la serie de tiempo se utilizó la transformada rápida de fourier [fft](https://la.mathworks.com/help/matlab/ref/fft.html) en Matlab, utilizando un calculo directo con la función mecionanda. 
+
+1) En la  primera sección del código se piden los parametros necesarios para utilizar la función 
 - Frecuencia de muestro
 - Logitud de la señal
 - Tiempo de señal
 
 ![hola](./24.png)
-Segunda sección aplica la función (fft)
+2) Aplica la función (fft)
 ![hola](./25.png)
 
-Tercero, realiza la gráfica de la señal de frecuencia
+3) Se realiza la gráfica de la señal de frecuencia
 ![hola](./26.png)
 
 
