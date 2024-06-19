@@ -248,10 +248,13 @@ Para el calculo de las frecuencias de inundación dentro de la serie de tiempo s
 - Tiempo de señal
 
 ![hola](./24.png)
+
 2) Aplica la función (fft)
+3) 
 ![hola](./25.png)
 
-3) Se realiza la gráfica de la señal de frecuencia
+4) Se realiza la gráfica de la señal de frecuencia
+
 ![hola](./26.png)
 
 
