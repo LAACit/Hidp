@@ -235,7 +235,8 @@ Finalmente muestra los resultado por mes;
 Cada fila representa un mes. Fila 1; Enero, Fila 2; Febrero, Fila3; Marzo... ETC 
 
 >[!NOTE]
->Esto se hace sólo por un año, si se tiene una serie de tiempo que cruza por dos años se debe correr el scrip dos veces. Iniciando desde la selección de año (linea 26)
+>En caso de presentar valores como `NaN` en la columna numero 6 `promedio` significa no se hizó la interpolación por lo que se debe hacer.
+>
 
 ## Análisis de espectros <a name="id8"></a>
 ### Frecuencias (FFT) 
@@ -248,8 +249,6 @@ En la  primera sección del código se piden los parametros necesarios para util
 Segunda sección aplica la función (fft)
 
 Tercero, realiza la gráfica de la señal de frecuencia
-
-
 
 
 
